@@ -31,7 +31,7 @@ const Nav = styled.nav`
   a {
     text-decoration: none;
     color: DarkGray;
-    font-weight: 600;
+    font-weight: lighter;
     transition: all 0.2s;
     border-bottom: 2px solid ${props => props.theme.colors.base};
     &:hover {
