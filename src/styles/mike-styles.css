@@ -1,0 +1,29 @@
+:root {
+  --fontDecorative: 'Righteous', sans-serif;
+  --fontMain: 'Blinker', sans-serif;
+}
+
+.landing {
+  background-color: black;
+  color: white;
+  height: 800px;
+}
+
+.landing__text {
+  display: flex;
+  flex-direction: column;
+  margin: 150px;
+  text-align: center;
+}
+
+.landing__header {
+  font-family: 'Righteous', sans-serif;
+  font-size: 15rem;
+}
+
+.landing__subheader {
+  font-size: 2rem;
+  font-family: var(--fontMain);
+  font-weight: lighter;
+  margin: 50px auto;
+}

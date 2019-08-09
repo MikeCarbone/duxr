@@ -8,6 +8,8 @@ import Container from '../components/Container'
 import Pagination from '../components/Pagination'
 import SEO from '../components/SEO'
 import config from '../utils/siteConfig'
+import Landing from '../components/Landing'
+import '../styles/mike-styles.css';
 
 const Index = ({ data, pageContext }) => {
   const posts = data.allContentfulPost.edges
@@ -23,17 +25,15 @@ const Index = ({ data, pageContext }) => {
           <title>{`${config.siteTitle} - Page ${currentPage}`}</title>
         </Helmet>
       )}
+      <Landing />
       <Container>
         {isFirstPage ? (
-          <>
-            {/* <h1>Hello!</h1> */}
             <CardList>
               <Card {...featuredPost} featured />
               {posts.slice(1).map(({ node: post }) => (
                 <Card key={post.id} {...post} />
               ))}
             </CardList>
-          </>
         ) : (
           <CardList>
             {posts.map(({ node: post }) => (
